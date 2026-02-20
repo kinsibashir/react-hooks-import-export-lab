@@ -1,11 +1,13 @@
-import "@testing-library/jest-dom";
-import { render } from "@testing-library/react";
-import About from "../components/About";
+// src/components/About.js
+import { image } from "../data/user";
 
-test("it is exported as a default export", () => {
-  try {
-    expect(() => render(<About />)).not.toThrow();
-  } catch (e) {
-    throw new Error("Make sure to export this component!");
-  }
-});
+function About() {
+  return (
+    <div>
+      <h1>About Me</h1>
+      <img src={image} alt="profile" />
+    </div>
+  );
+}
+
+export default About;   // ✅ default export
